@@ -5,7 +5,8 @@ data class VendaHoje(
     val precoProduto: Double,
     val complemento: String?,
     val precoComplemento: Double,
-    val hora: String
+    val hora: String,
+    val data: String
 ) {
     val total: Double
         get() = precoProduto + precoComplemento

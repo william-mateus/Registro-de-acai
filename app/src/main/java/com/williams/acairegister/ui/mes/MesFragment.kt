@@ -1,5 +1,6 @@
 package com.williams.acairegister.ui.mes
 
+import ItemVendaHojeAdapter
 import android.app.DatePickerDialog
 import android.graphics.Color
 import android.os.Bundle
@@ -13,7 +14,6 @@ import com.github.mikephil.charting.data.PieEntry
 import com.williams.acairegister.DbRegistro
 import com.williams.acairegister.databinding.FragmentSlideshowBinding
 import com.williams.acairegister.ui.home.ItemVendaHoje
-import com.williams.acairegister.ui.home.ItemVendaHojeAdapter
 import java.util.Calendar
 
 class MesFragment : Fragment() {
@@ -56,7 +56,9 @@ class MesFragment : Fragment() {
         val db = DbRegistro(requireContext())
         val vendas = db.buscarVendasDoMes(mesAno)
 
-        binding.recyclerView.adapter = ItemVendaHojeAdapter(vendas)
+        binding.recyclerView.adapter =
+            ItemVendaHojeAdapter(vendas, mostrarData = true)
+
 
         atualizarPieChart(vendas)
     }

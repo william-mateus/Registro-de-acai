@@ -1,5 +1,6 @@
 package com.williams.acairegister.ui.home
 
+import ItemVendaHojeAdapter
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -43,7 +44,9 @@ class Hoje : Fragment() {
         val db = DbRegistro(requireContext())
         val vendasHoje = db.buscarVendasDoDia(hoje)
 
-        binding.recyclerView.adapter = ItemVendaHojeAdapter(vendasHoje)
+        binding.recyclerView.adapter =
+            ItemVendaHojeAdapter(vendasHoje, mostrarData = false)
+
 
         atualizarPieChart(vendasHoje)
     }

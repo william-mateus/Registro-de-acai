@@ -1,5 +1,6 @@
 package com.williams.acairegister.ui.historico
 
+import ItemVendaHojeAdapter
 import android.app.DatePickerDialog
 import android.graphics.Color
 import android.os.Bundle
@@ -13,7 +14,6 @@ import com.github.mikephil.charting.data.PieEntry
 import com.williams.acairegister.DbRegistro
 import com.williams.acairegister.databinding.FragmentGalleryBinding
 import com.williams.acairegister.ui.home.ItemVendaHoje
-import com.williams.acairegister.ui.home.ItemVendaHojeAdapter
 import java.util.Calendar
 
 class Historico : Fragment() {
@@ -74,7 +74,8 @@ class Historico : Fragment() {
         val vendas = db.buscarVendasDoDia(data)
 
         binding.recyclerView.adapter =
-            ItemVendaHojeAdapter(vendas)
+            ItemVendaHojeAdapter(vendas, mostrarData = true)
+
 
         atualizarPieChart(vendas)
     }

@@ -1,12 +1,12 @@
-package com.williams.acairegister.ui.home
-
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.williams.acairegister.databinding.ItemVendaHojeBinding
+import com.williams.acairegister.ui.home.ItemVendaHoje
 
 class ItemVendaHojeAdapter(
-    private val lista: List<ItemVendaHoje>
+    private val lista: List<ItemVendaHoje>,
+    private val mostrarData: Boolean = false // 🔥 controle aqui
 ) : RecyclerView.Adapter<ItemVendaHojeAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: ItemVendaHojeBinding)
@@ -33,7 +33,12 @@ class ItemVendaHojeAdapter(
         holder.binding.txtValor.text =
             "R$ %.2f".format(item.valorTotal)
 
-        holder.binding.txtHora.text = item.hora
+        // 🔥 Data + hora só quando necessário
+        holder.binding.txtDataHora.text =
+            if (mostrarData)
+                "${item.data} • ${item.hora}"
+            else
+                item.hora
     }
 
     override fun getItemCount() = lista.size
