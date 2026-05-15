@@ -25,6 +25,6 @@
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.williams.acairegister.RegisterFragment"
-        android:label="fragment_register"
+        android:label="Registre sua venda!"
         tools:layout="@layout/fragment_register" />
 </navigation>

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fundo_app"
+    android:background="@drawable/fundo2"
 
     tools:context=".ui.historico.Historico">
 
@@ -60,7 +60,8 @@
         android:layout_height="0dp"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
-        app:cardElevation="6dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
         app:layout_constraintTop_toBottomOf="@id/pieChart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,6 +71,8 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/shape_piechart"
+
             android:padding="12dp"
             android:clipToPadding="false"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

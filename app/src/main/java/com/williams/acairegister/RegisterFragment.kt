@@ -28,8 +28,8 @@ class RegisterFragment : Fragment() {
         // Spinner Tipo de Venda
         // ----------------------------
         val tiposDeVenda = listOf(
-            TipoVenda("1 Litro", 35.0),
-            TipoVenda("700 ML", 28.0),
+            TipoVenda("1 Litro", 40.0),
+            TipoVenda("700 ML", 30.0),
             TipoVenda("500 ML", 22.0),
             TipoVenda("300 ML", 18.0)
         )
@@ -65,9 +65,7 @@ class RegisterFragment : Fragment() {
 
         binding.tipoComplementoSpinner.adapter = complementoAdapter
 
-        // ----------------------------
-        // Botão Salvar
-        // ----------------------------
+
         binding.saveButton.setOnClickListener {
 
             // PEGANDO SELEÇÃO DOS SPINNERS

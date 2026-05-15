@@ -21,6 +21,13 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="Theme.AcaiRegister.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/purple_700</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
     <style name="Theme.AcaiRegister.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.AcaiRegister.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
